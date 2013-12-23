@@ -21,6 +21,9 @@
 		CA31630B1856B17700532E6A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA3162ED1856B17700532E6A /* UIKit.framework */; };
 		CA3163131856B17700532E6A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA3163111856B17700532E6A /* InfoPlist.strings */; };
 		CA3163151856B17700532E6A /* PongTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3163141856B17700532E6A /* PongTests.m */; };
+		CA42003C1863DE26009C4DED /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = CA42003B1863DE26009C4DED /* ball.png */; };
+		CA42004818654CFC009C4DED /* Start.m in Sources */ = {isa = PBXBuildFile; fileRef = CA42004718654CFC009C4DED /* Start.m */; };
+		CA42004A1866AE21009C4DED /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA4200491866AE21009C4DED /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,10 @@
 		CA3163101856B17700532E6A /* PongTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PongTests-Info.plist"; sourceTree = "<group>"; };
 		CA3163121856B17700532E6A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CA3163141856B17700532E6A /* PongTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PongTests.m; sourceTree = "<group>"; };
+		CA42003B1863DE26009C4DED /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
+		CA42004618654CFC009C4DED /* Start.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Start.h; path = ../Start.h; sourceTree = "<group>"; };
+		CA42004718654CFC009C4DED /* Start.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Start.m; path = ../Start.m; sourceTree = "<group>"; };
+		CA4200491866AE21009C4DED /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA42004A1866AE21009C4DED /* QuartzCore.framework in Frameworks */,
 				CA3162EC1856B17700532E6A /* CoreGraphics.framework in Frameworks */,
 				CA3162EE1856B17700532E6A /* UIKit.framework in Frameworks */,
 				CA3162EA1856B17700532E6A /* Foundation.framework in Frameworks */,
@@ -101,6 +109,7 @@
 		CA3162E81856B17700532E6A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CA4200491866AE21009C4DED /* QuartzCore.framework */,
 				CA3162E91856B17700532E6A /* Foundation.framework */,
 				CA3162EB1856B17700532E6A /* CoreGraphics.framework */,
 				CA3162ED1856B17700532E6A /* UIKit.framework */,
@@ -117,7 +126,10 @@
 				CA3162FB1856B17700532E6A /* Main.storyboard */,
 				CA3162FE1856B17700532E6A /* ViewController.h */,
 				CA3162FF1856B17700532E6A /* ViewController.m */,
+				CA42004618654CFC009C4DED /* Start.h */,
+				CA42004718654CFC009C4DED /* Start.m */,
 				CA3163011856B17700532E6A /* Images.xcassets */,
+				CA42003B1863DE26009C4DED /* ball.png */,
 				CA3162F01856B17700532E6A /* Supporting Files */,
 			);
 			path = Pong;
@@ -199,6 +211,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Shouvik D'Costa";
 				TargetAttributes = {
+					CA3162E51856B17700532E6A = {
+						DevelopmentTeam = JDH4R252AK;
+					};
 					CA3163061856B17700532E6A = {
 						TestTargetID = CA3162E51856B17700532E6A;
 					};
@@ -230,6 +245,7 @@
 			files = (
 				CA3163021856B17700532E6A /* Images.xcassets in Resources */,
 				CA3162F41856B17700532E6A /* InfoPlist.strings in Resources */,
+				CA42003C1863DE26009C4DED /* ball.png in Resources */,
 				CA3162FD1856B17700532E6A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA42004818654CFC009C4DED /* Start.m in Sources */,
 				CA3163001856B17700532E6A /* ViewController.m in Sources */,
 				CA3162FA1856B17700532E6A /* AppDelegate.m in Sources */,
 				CA3162F61856B17700532E6A /* main.m in Sources */,
@@ -378,10 +395,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Pong/Pong-Prefix.pch";
 				INFOPLIST_FILE = "Pong/Pong-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -391,10 +411,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Pong/Pong-Prefix.pch";
 				INFOPLIST_FILE = "Pong/Pong-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -460,6 +483,7 @@
 				CA31631A1856B17700532E6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CA31631B1856B17700532E6A /* Build configuration list for PBXNativeTarget "PongTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +492,7 @@
 				CA31631D1856B17700532E6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
